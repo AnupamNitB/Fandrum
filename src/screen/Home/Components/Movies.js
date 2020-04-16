@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { View, Image, TextInput, Text, TouchableOpacity } from "react-native";
 import { Actions } from "react-native-router-flux";
-import { IconAsset, Strings, UiColor } from "../../theme";
-import { HeaderWithGoBackAndOption } from "../../components/AppHeader";
-import styles from "./styles";
+// import { IconAsset, Strings, UiColor } from "../../theme";
+// import { HeaderWithGoBackAndOption } from "../../components/AppHeader";
+import styles from "./movieStyles";
 
 // import { connect } from 'react-redux';
 
@@ -15,7 +15,7 @@ class Movies extends React.Component {
   render() {
     return (
       <View style={styles.mainContainer}>
-        <Text>skdnflks</Text>
+        <Text>Movies</Text>
       </View>
     );
   }

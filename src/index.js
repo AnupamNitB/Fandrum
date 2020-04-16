@@ -14,7 +14,7 @@ import Splash from "./screen/Splash";
 // import SignUp from './screen/SignUp';
 import Home from "./screen/Home";
 import Smile from "./screen/Smile";
-import drawerContain from "./drawerContain";
+import Play from "./screen/Play";
 
 const TabIcon = ({ img, focused }) => {
   return (
@@ -52,6 +52,7 @@ const Root = () => {
             key="Smile"
             title="Smile"
           />
+          <Scene component={Play} hideNavBar={true} key="Play" title="Play" />
           <Scene
             key="tabbar"
             hideNavBar={true}
@@ -96,15 +97,15 @@ const Root = () => {
               />
             </Scene>
             <Scene
-              title="Home"
+              title="Play"
               icon={TabIcon}
               img={require("./assets/icons/ic_play.png")}
             >
               <Scene
-                component={Home}
+                component={Play}
                 hideNavBar={true}
-                key="Home"
-                title="Home"
+                key="Play"
+                title="Play"
               />
             </Scene>
           </Scene>

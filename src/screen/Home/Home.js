@@ -15,18 +15,10 @@ import { IconAsset, Strings, UiColor } from "../../theme";
 import { HeaderWithGoBackAndOption } from "../../components/AppHeader";
 import styles from "./styles";
 import { SliderBox } from "react-native-image-slider-box";
-import ScrollableTabView, {
-  DefaultTabBar,
-} from "react-native-scrollable-tab-view";
-import { Col, Row, Grid } from "react-native-easy-grid";
-// import MOVIES from "./Components/Movies";
 
-const tabsData = [
-  { text: "MOVIES", id: 0 },
-  { text: "SHOWS", id: 1 },
-  { text: "SPORTS", id: 2 },
-  { text: "FAN VIDEOS", id: 3 },
-];
+import ScrollableTabView from "react-native-scrollable-tab-view";
+import { Col, Row, Grid } from "react-native-easy-grid";
+import Movies from "./Components/Movies";
 
 class Home extends React.Component {
   constructor(props) {
@@ -67,10 +59,10 @@ class Home extends React.Component {
               }}
             />
           </View>
-          {/* <ScrollableTabView
-            renderTabBar={() => <CustomTabBar someProp={"here"} />}
-          >
-            <MOVIES tabLabel="React" />
+
+          {/* <ScrollableTabView>
+            <Movies tabLabel="React" />
+            <Movies tabLabel="tititi" />
           </ScrollableTabView> */}
         </ScrollView>
       </View>
