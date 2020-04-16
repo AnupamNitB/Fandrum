@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
-import {View, Image, Text} from 'react-native';
-import {Actions} from 'react-native-router-flux';
-import styles from './styles';
-import {Strings} from '../../theme';
+import React, { Component } from "react";
+import { View, Image, ImageBackground } from "react-native";
+import { Actions } from "react-native-router-flux";
+import styles from "./styles";
+import { Strings } from "../../theme";
 
 class Splash extends Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class Splash extends Component {
   async componentWillMount() {
     try {
       setTimeout(() => {
-        Actions.Home();
+        Actions.tabbar();
       }, 2000);
     } catch (error) {}
   }
@@ -21,7 +21,10 @@ class Splash extends Component {
   render() {
     return (
       <View style={styles.mainContainer}>
-        <Text style={styles.textContainer}>{Strings.APP_NAME}</Text>
+        <ImageBackground
+          source={require("../../assets/img/splash.png")}
+          style={styles.splashImg}
+        />
       </View>
     );
   }
