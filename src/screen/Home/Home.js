@@ -22,6 +22,7 @@ import Movies from "../../tabComponents/Components/Movies";
 import Shows from "../../tabComponents/Components/Shows";
 import Sports from "../../tabComponents/Components/Sports";
 import FanVideos from "../../tabComponents/Components/FanVideos";
+import { height } from "../../utils/Dimensions";
 
 class Home extends React.Component {
   constructor(props) {
@@ -63,6 +64,7 @@ class Home extends React.Component {
           </View>
 
           <ScrollableTabView
+            style={{ marginVertical: 25, backgroundColor: "#ccc" }}
             locked
             scrollWithoutAnimation
             tabBarTextStyle={styles.tabBarTextStyle}
@@ -75,6 +77,7 @@ class Home extends React.Component {
             <Shows tabLabel="SHOWS" />
             <FanVideos tabLabel="FUN VIDEO" />
           </ScrollableTabView>
+          <Movies />
         </ScrollView>
       </View>
     );

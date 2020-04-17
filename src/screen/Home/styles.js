@@ -9,8 +9,10 @@ export default StyleSheet.create({
 
   tabBarTextStyle: {
     fontSize: 15,
+    fontWeight: "400",
   },
   underlineStyle: {
-    color: "#E10264",
+    backgroundColor: "#E10264",
+    // marginBottom: 5,
   },
 });
