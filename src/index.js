@@ -8,13 +8,15 @@ import {
 } from "react-native-router-flux";
 import { connect } from "react-redux";
 import { Dimensions, Image } from "react-native";
-import AsyncStorage from "@react-native-community/async-storage";
+import DollarIcon from "./components/DollarIcon";
+// import AsyncStorage from "@react-native-community/async-storage";
 import Splash from "./screen/Splash";
 // import Login from './screen/Login';
 // import SignUp from './screen/SignUp';
 import Home from "./screen/Home";
 import Smile from "./screen/Smile";
 import Play from "./screen/Play";
+import MoviePlay from "./screen/MoviesPlay";
 
 const TabIcon = ({ img, focused }) => {
   return (
@@ -54,6 +56,12 @@ const Root = () => {
           />
           <Scene component={Play} hideNavBar={true} key="Play" title="Play" />
           <Scene
+            component={MoviePlay}
+            hideNavBar={true}
+            key="MoviePlay"
+            title="MoviePlay"
+          />
+          <Scene
             key="tabbar"
             hideNavBar={true}
             tabs
@@ -84,16 +92,12 @@ const Root = () => {
                 title="Smile"
               />
             </Scene>
-            <Scene
-              title="Home"
-              icon={TabIcon}
-              img={require("./assets/icons/ic_dollar.png")}
-            >
+            <Scene title="DollarIcon" icon={this.DollarIcon}>
               <Scene
-                component={Home}
+                component={DollarIcon}
                 hideNavBar={true}
-                key="Home"
-                title="Home"
+                key="DollarIcon"
+                title="DollarIcon"
               />
             </Scene>
             <Scene
@@ -106,6 +110,18 @@ const Root = () => {
                 hideNavBar={true}
                 key="Play"
                 title="Play"
+              />
+            </Scene>
+            <Scene
+              title="MoviePlay"
+              icon={TabIcon}
+              img={require("./assets/icons/ic_ball.png")}
+            >
+              <Scene
+                component={MoviePlay}
+                hideNavBar={true}
+                key="MoviePlay"
+                title="MoviePlay"
               />
             </Scene>
           </Scene>

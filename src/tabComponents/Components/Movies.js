@@ -3,7 +3,7 @@ import { View, Image, TextInput, Text, TouchableOpacity } from "react-native";
 import { Actions } from "react-native-router-flux";
 // import { IconAsset, Strings, UiColor } from "../../theme";
 // import { HeaderWithGoBackAndOption } from "../../components/AppHeader";
-import styles from "./movieStyles";
+import styles from "../ComponentStyles/movieStyles";
 
 // import { connect } from 'react-redux';
 

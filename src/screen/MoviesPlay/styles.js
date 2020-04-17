@@ -6,11 +6,4 @@ export default StyleSheet.create({
   mainContainer: {
     flex: 1,
   },
-
-  tabBarTextStyle: {
-    fontSize: 15,
-  },
-  underlineStyle: {
-    color: "#E10264",
-  },
 });

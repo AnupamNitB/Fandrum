@@ -33,17 +33,17 @@ const item = [
   {
     name: "CARROT",
     hotSpot:
-      "https://image.freepik.com/free-photo/trendy-female-with-cocktail-shopping-bags_23-2148170087.jpg",
+      "https://m.media-amazon.com/images/M/MV5BYWVmZjMwMmUtM2Q2Yi00NDg1LWJkZWYtMjRmMjM2NTdhNzViXkEyXkFqcGdeQXVyMjk0NTE3OTI@._V1_.jpg",
   },
   {
     name: "ALIZARIN",
     hotSpot:
-      "https://image.freepik.com/free-photo/elegant-young-woman-costume-hat-with-handbag-room_23-2148068413.jpg",
+      "https://m.media-amazon.com/images/M/MV5BYWVmZjMwMmUtM2Q2Yi00NDg1LWJkZWYtMjRmMjM2NTdhNzViXkEyXkFqcGdeQXVyMjk0NTE3OTI@._V1_.jpg",
   },
   {
     name: "CLOUDS",
     hotSpot:
-      "https://image.freepik.com/free-photo/low-angle-stylish-woman-with-handbag_23-2148353512.jpg",
+      "https://m.media-amazon.com/images/M/MV5BYWVmZjMwMmUtM2Q2Yi00NDg1LWJkZWYtMjRmMjM2NTdhNzViXkEyXkFqcGdeQXVyMjk0NTE3OTI@._V1_.jpg",
   },
 ];
 class Smile extends React.Component {

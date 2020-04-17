@@ -18,13 +18,15 @@ import { SliderBox } from "react-native-image-slider-box";
 
 import ScrollableTabView from "react-native-scrollable-tab-view";
 import { Col, Row, Grid } from "react-native-easy-grid";
-import Movies from "./Components/Movies";
+import Movies from "../../tabComponents/Components/Movies";
+import Shows from "../../tabComponents/Components/Shows";
+import Sports from "../../tabComponents/Components/Sports";
+import FanVideos from "../../tabComponents/Components/FanVideos";
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedCheckbox: 0,
       images: [
         require("../../assets/img/cut_photo_img01.png"),
         require("../../assets/img/cut_photo_img02.png"),
@@ -60,10 +62,19 @@ class Home extends React.Component {
             />
           </View>
 
-          {/* <ScrollableTabView>
-            <Movies tabLabel="React" />
-            <Movies tabLabel="tititi" />
-          </ScrollableTabView> */}
+          <ScrollableTabView
+            locked
+            scrollWithoutAnimation
+            tabBarTextStyle={styles.tabBarTextStyle}
+            tabBarInactiveTextColor={"#000"}
+            tabBarActiveTextColor={"#E10264"}
+            tabBarUnderlineStyle={styles.underlineStyle}
+          >
+            <Movies tabLabel="MOVIES" />
+            <Sports tabLabel="SPORTS" />
+            <Shows tabLabel="SHOWS" />
+            <FanVideos tabLabel="FUN VIDEO" />
+          </ScrollableTabView>
         </ScrollView>
       </View>
     );
