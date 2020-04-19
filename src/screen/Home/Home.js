@@ -45,6 +45,7 @@ class Home extends React.Component {
         <ScrollView>
           <View style={styles.mainContainer}>
             <SliderBox
+              style={styles.bannerImg}
               images={this.state.images}
               autoplay
               circleLoop
@@ -79,7 +80,7 @@ class Home extends React.Component {
             <FanVideos tabLabel="FUN VIDEO" />
           </ScrollableTabView> */}
           <ScrollableTabView
-            style={{ height: 35, marginTop: 25 }}
+            style={{ height: 40, marginTop: 25 }}
             locked
             scrollWithoutAnimation
             tabBarBackgroundColor={"#ccc"}

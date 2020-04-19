@@ -22,7 +22,7 @@ export default StyleSheet.create({
     height: h(30),
     width: w(32),
     borderRadius: 5,
-    marginTop: -40,
+    // marginTop: -40,
   },
   boxContent: {
     flex: 1,
