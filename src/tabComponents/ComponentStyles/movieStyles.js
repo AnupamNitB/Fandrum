@@ -7,6 +7,7 @@ export default StyleSheet.create({
     flex: 1,
     // backgroundColor: UiColor.GRAY,
     // color: "pink",
+    marginTop: 25,
   },
   fullImg: {
     width: w(48),
@@ -20,8 +21,8 @@ export default StyleSheet.create({
   },
   icon: {
     position: "absolute",
-    top: 9,
-    left: 22,
+    top: 0,
+    left: 15,
     width: w(6),
     height: h(6),
   },

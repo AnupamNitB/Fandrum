@@ -14,6 +14,8 @@ import Splash from "./screen/Splash";
 // import Login from './screen/Login';
 // import SignUp from './screen/SignUp';
 import Home from "./screen/Home";
+import MoreMovie from "./screen/Home/MoreMovie";
+import MovieDetails from "./screen/Home/MovieDetails";
 import Smile from "./screen/Smile";
 import Play from "./screen/Play";
 import MoviePlay from "./screen/MoviesPlay";
@@ -46,7 +48,18 @@ const Root = () => {
             title="Splash"
             initial={true}
           />
-
+          <Scene
+            component={MoreMovie}
+            hideNavBar={true}
+            key="MoreMovie"
+            title="MoreMovie"
+          />
+          <Scene
+            component={MovieDetails}
+            hideNavBar={true}
+            key="MovieDetails"
+            title="MovieDetails"
+          />
           <Scene component={Home} hideNavBar={true} key="Home" title="Home" />
           <Scene
             component={Smile}
@@ -61,6 +74,7 @@ const Root = () => {
             key="MoviePlay"
             title="MoviePlay"
           />
+
           <Scene
             key="tabbar"
             hideNavBar={true}
@@ -96,8 +110,8 @@ const Root = () => {
               <Scene
                 component={DollarIcon}
                 hideNavBar={true}
-                key="DollarIcon"
-                title="DollarIcon"
+                // key="DollarIcon"
+                // title="DollarIcon"
               />
             </Scene>
             <Scene

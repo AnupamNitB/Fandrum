@@ -5,34 +5,15 @@ import { UiColor, TextColor, TextSize } from "../../theme";
 export default StyleSheet.create({
   mainContainer: {
     flex: 1,
+    backgroundColor: UiColor.GRAY,
   },
-  videoTitle: {
-    fontSize: TextSize.h2,
-    marginLeft: w(5),
-    fontWeight: "bold",
-    marginTop: w(4),
-    color: "#000",
+  bkImage: {
+    width: w(100),
+    height: h(90),
   },
-  imageThumbnail: {
-    alignItems: "center",
-    height: h(25),
-    width: w(60),
-    marginLeft: w(2),
-    marginTop: w(2),
-  },
-  imageThumbnail2: {
-    alignItems: "center",
-    height: h(18),
-    width: w(45),
-    marginLeft: w(2),
-    marginTop: w(2),
-  },
-  itemText: {
-    color: UiColor.BLACK,
-    textAlign: "center",
-    marginLeft: w(1),
-    marginTop: w(2),
-    fontWeight: "bold",
-    fontSize: 13,
+  socialIcon: {
+    width: 30,
+    height: 30,
+    marginBottom: 10,
   },
 });

@@ -17,12 +17,11 @@ import styles from "./styles";
 import { SliderBox } from "react-native-image-slider-box";
 
 import ScrollableTabView from "react-native-scrollable-tab-view";
-import { Col, Row, Grid } from "react-native-easy-grid";
+
 import Movies from "../../tabComponents/Components/Movies";
 import Shows from "../../tabComponents/Components/Shows";
 import Sports from "../../tabComponents/Components/Sports";
 import FanVideos from "../../tabComponents/Components/FanVideos";
-import { height } from "../../utils/Dimensions";
 
 class Home extends React.Component {
   constructor(props) {
@@ -49,6 +48,7 @@ class Home extends React.Component {
               images={this.state.images}
               autoplay
               circleLoop
+              visible={this.state.showListVisiable}
               sliderBoxHeight={200}
               onCurrentImagePressed={(index) =>
                 console.warn(`image ${index} pressed`)
@@ -63,10 +63,26 @@ class Home extends React.Component {
             />
           </View>
 
-          <ScrollableTabView
-            style={{ marginVertical: 25, backgroundColor: "#ccc" }}
+          {/* <ScrollableTabView
+            style={{ marginTop: 20 }}
             locked
             scrollWithoutAnimation
+            tabBarTextStyle={styles.tabBarTextStyle}
+            tabBarBackgroundColor={"#ccc"}
+            tabBarInactiveTextColor={"#000"}
+            tabBarActiveTextColor={"#E10264"}
+            tabBarUnderlineStyle={styles.underlineStyle}
+          >
+            <Movies tabLabel="MOVIES" />
+            <Sports tabLabel="SPORTS" />
+            <Shows tabLabel="SHOWS" />
+            <FanVideos tabLabel="FUN VIDEO" />
+          </ScrollableTabView> */}
+          <ScrollableTabView
+            style={{ height: 35, marginTop: 25 }}
+            locked
+            scrollWithoutAnimation
+            tabBarBackgroundColor={"#ccc"}
             tabBarTextStyle={styles.tabBarTextStyle}
             tabBarInactiveTextColor={"#000"}
             tabBarActiveTextColor={"#E10264"}
@@ -77,7 +93,9 @@ class Home extends React.Component {
             <Shows tabLabel="SHOWS" />
             <FanVideos tabLabel="FUN VIDEO" />
           </ScrollableTabView>
-          <Movies />
+          <View style={{ flex: 1, marginTop: 5 }}>
+            <Movies />
+          </View>
         </ScrollView>
       </View>
     );
