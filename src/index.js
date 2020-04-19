@@ -106,7 +106,7 @@ const Root = () => {
                 title="Smile"
               />
             </Scene>
-            <Scene title="DollarIcon" icon={this.DollarIcon}>
+            <Scene icon={this.DollarIcon}>
               <Scene
                 component={DollarIcon}
                 hideNavBar={true}

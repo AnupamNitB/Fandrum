@@ -63,57 +63,82 @@ class Play extends React.Component {
     return (
       <View style={styles.mainContainer}>
         {HeaderWithGoBackAndOption("", Strings.APP_NAME)}
-        <View>
-          <Image
-            source={require("../../assets/img/cut_main_banner.png")}
-            style={styles.bkImage}
-          />
+        <ScrollView>
+          <View>
+            <Image
+              // resizeMode="contain"
+              source={require("../../assets/img/cut_main_banner_01.png")}
+              style={styles.bkImage}
+            />
+            <View
+              style={{
+                position: "absolute",
+                top: 0,
+                right: 5,
+                marginTop: 95,
+              }}
+            >
+              <TouchableOpacity>
+                <Image
+                  style={styles.socialIcon}
+                  source={require("../../assets/img/cut_sideicon_01.png")}
+                />
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Image
+                  style={styles.socialIcon}
+                  source={require("../../assets/img/cut_sideicon_02.png")}
+                />
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Image
+                  style={styles.socialIcon}
+                  source={require("../../assets/img/cut_sideicon_03.png")}
+                />
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Image
+                  style={styles.socialIcon}
+                  source={require("../../assets/img/cut_sideicon_04.png")}
+                />
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Image
+                  style={styles.socialIcon}
+                  source={require("../../assets/img/cut_sideicon_05.png")}
+                />
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Image
+                  style={styles.socialIcon}
+                  source={require("../../assets/img/cut_sideicon_06.png")}
+                />
+              </TouchableOpacity>
+            </View>
+          </View>
           <View
             style={{
               position: "absolute",
-              top: 0,
-              right: 5,
-              marginTop: 95,
+              bottom: 0,
+              flexDirection: "row-reverse",
             }}
           >
-            <TouchableOpacity>
-              <Image
-                style={styles.socialIcon}
-                source={require("../../assets/icons/ic_sound.png")}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Image
-                style={styles.socialIcon}
-                source={require("../../assets/icons/ic_yoyo.png")}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Image
-                style={styles.socialIcon}
-                source={require("../../assets/icons/ic_unlike.png")}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Image
-                style={styles.socialIcon}
-                source={require("../../assets/icons/ic_unlike.png")}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Image
-                style={styles.socialIcon}
-                source={require("../../assets/icons/ic_unlike.png")}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Image
-                style={styles.socialIcon}
-                source={require("../../assets/icons/ic_unlike.png")}
-              />
-            </TouchableOpacity>
+            <View style={styles.buttons}>
+              <TouchableOpacity style={[styles.button]}>
+                <Text style={styles.btnContainer}>GENIAL</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity style={[styles.button]}>
+                <Text style={styles.btnContainer}>BORING</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity style={[styles.button]}>
+                <Text style={styles.btnContainer}>FRIDY MOVIE</Text>
+              </TouchableOpacity>
+              <View style={{ height: 30 }} />
+            </View>
           </View>
-        </View>
+        </ScrollView>
       </View>
     );
   }

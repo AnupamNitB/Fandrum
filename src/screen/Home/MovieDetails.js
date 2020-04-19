@@ -6,6 +6,7 @@ import {
   Text,
   TouchableOpacity,
   FlatList,
+  ImageBackground,
 } from "react-native";
 import { Actions } from "react-native-router-flux";
 import { IconAsset, Strings, UiColor } from "../../theme";
@@ -370,10 +371,40 @@ class MovieDetails extends React.Component {
               renderItem={({ item }) => (
                 <View style={styles.fanBox}>
                   <TouchableOpacity>
-                    <Image
+                    <ImageBackground
                       source={{ uri: item.hotSpot }}
                       style={styles.imageThumbnail}
                     />
+                    <Image
+                      source={require("../../assets/img/cut_bookmark.png")}
+                      style={styles.icon}
+                    />
+                    <View
+                      style={{
+                        height: 30,
+                        width: 125,
+                        backgroundColor: "#D3D3D399",
+                        position: "absolute",
+                        bottom: 50,
+                        // paddingHorizontal: 5,
+                        flexDirection: "row",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <View
+                        style={{
+                          flexDirection: "row",
+                        }}
+                      >
+                        <Image
+                          source={require("../../assets/img/cut_comment.png")}
+                          style={{ height: 20, width: 20 }}
+                        />
+                        <Text style={{ marginLeft: 8, color: "#fff" }}>
+                          129
+                        </Text>
+                      </View>
+                    </View>
                     <View
                       style={{
                         alignSelf: "center",

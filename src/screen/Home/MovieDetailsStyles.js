@@ -193,4 +193,11 @@ export default StyleSheet.create({
     fontWeight: "bold",
     marginLeft: 20,
   },
+  icon: {
+    position: "absolute",
+    top: 0,
+    left: 15,
+    width: w(6),
+    height: h(6),
+  },
 });
