@@ -9,7 +9,6 @@ export default StyleSheet.create({
   bannerImg: {
     width: w(100),
     height: h(35),
-    // backgroundColor: "#f0faf9",
   },
 
   box: {
@@ -22,7 +21,7 @@ export default StyleSheet.create({
     height: h(30),
     width: w(32),
     borderRadius: 5,
-    // marginTop: -40,
+    marginTop: -40,
   },
   boxContent: {
     flex: 1,
@@ -41,6 +40,7 @@ export default StyleSheet.create({
   },
   buttons: {
     flexDirection: "row",
+    marginLeft: 10,
   },
   button: {
     height: w(4),
@@ -66,6 +66,7 @@ export default StyleSheet.create({
     width: w(45),
     fontWeight: "bold",
     marginLeft: 15,
+    marginVertical: 25,
   },
   description: {
     fontSize: 15,
@@ -77,23 +78,35 @@ export default StyleSheet.create({
     height: 30,
     marginBottom: 10,
   },
+  playIcon: {
+    width: 50,
+    height: 50,
+    tintColor: "#fff",
+  },
   emojiIcon: {
-    marginTop: 20,
-    width: 40,
-    height: 40,
+    marginTop: 25,
+    width: 50,
+    height: 50,
+    marginLeft: 20,
+  },
+  statIcon: {
+    marginTop: 25,
+    width: 50,
+    height: 50,
     marginLeft: 25,
   },
-  emojiIconOne: {
-    marginTop: 20,
+  statIcon1: {
+    marginBottom: 15,
     width: 40,
     height: 40,
-    borderEndWidth: 3,
+    // marginLeft: 25,
   },
   progressIcon: {
     width: w(95),
     height: h(1),
     marginTop: 20,
   },
+
   row: {
     flexDirection: "row",
     alignItems: "center",
@@ -107,8 +120,13 @@ export default StyleSheet.create({
     marginTop: 25,
   },
   nameTxt: {
-    marginLeft: 15,
-    fontWeight: "600",
+    marginLeft: 12,
+    fontWeight: "bold",
+    color: "#222",
+    fontSize: 18,
+  },
+  nameTxt1: {
+    marginLeft: 12,
     color: "#222",
     fontSize: 18,
   },
@@ -116,7 +134,7 @@ export default StyleSheet.create({
     fontWeight: "bold",
     color: "#777",
     fontSize: 18,
-    marginTop: 8,
+    marginTop: 18,
   },
   msgContainer: {
     flexDirection: "row",
@@ -135,7 +153,14 @@ export default StyleSheet.create({
     marginLeft: 5,
   },
   netflixImgs: {
-    marginLeft: 12,
+    marginLeft: 15,
+    height: 70,
+    width: 75,
+  },
+  youtubeImgs: {
+    height: 35,
+    width: 75,
+    marginTop: 20,
   },
   fanBox: {
     marginLeft: 20,
@@ -151,9 +176,9 @@ export default StyleSheet.create({
   },
   videoTitle: {
     fontSize: TextSize.h2,
-    marginLeft: w(5),
+    marginLeft: 10,
     fontWeight: "bold",
-    marginTop: w(5),
+    marginTop: 40,
 
     color: "#000",
   },
@@ -161,6 +186,13 @@ export default StyleSheet.create({
     // alignItems: "center",
     height: h(25),
     width: w(35),
+    // marginLeft: w(2),
+    // marginTop: w(5),
+  },
+  imageThumbnail1: {
+    // alignItems: "center",
+    height: h(35),
+    width: w(38),
     // marginLeft: w(2),
     // marginTop: w(5),
   },
@@ -173,16 +205,16 @@ export default StyleSheet.create({
     fontSize: 13,
   },
   interestingText: {
-    fontSize: 14,
+    fontSize: 15,
     color: "#646464",
     width: w(85),
     fontWeight: "bold",
     marginLeft: 5,
   },
   subTitle: {
-    fontSize: 12,
+    fontSize: 14,
     color: "#646464",
-    width: w(45),
+    width: w(85),
     fontWeight: "bold",
     marginLeft: 5,
   },

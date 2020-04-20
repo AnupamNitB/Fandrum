@@ -10,8 +10,14 @@ import {
 import { Actions } from "react-native-router-flux";
 import { IconAsset, Strings, UiColor } from "../../theme";
 import { HeaderWithGoBackAndOption } from "../../components/AppHeader";
+import ScrollableTabView from "react-native-scrollable-tab-view";
 import styles from "./styles";
-
+import Movies from "./tabComponents/Components/Movies";
+import Shows from "./tabComponents/Components/Shows";
+import Sports from "./tabComponents/Components/Sports";
+import FanVideos from "./tabComponents/Components/FanVideos";
+import Discover from "./tabComponents/Components/Discover";
+import Exploer from "./tabComponents/Components/Exploer";
 // import withError from './withError';
 // import { connect } from 'react-redux';
 const item = [
@@ -57,6 +63,36 @@ class MoviesPlay extends React.Component {
     return (
       <View style={styles.mainContainer}>
         {HeaderWithGoBackAndOption("", Strings.APP_NAME)}
+        <ScrollableTabView
+          style={{}}
+          locked
+          scrollWithoutAnimation
+          tabBarBackgroundColor={"#f5f2f2"}
+          tabBarTextStyle={styles.tabBarTextStyle}
+          tabBarInactiveTextColor={"#000"}
+          tabBarActiveTextColor={"#E10264"}
+          tabBarUnderlineStyle={styles.underlineStyle}
+        >
+          <Movies tabLabel="MOVIES" />
+          <Sports tabLabel="SPORTS" />
+          <Shows tabLabel="SHOWS" />
+          <FanVideos tabLabel="FUN VIDEO" />
+        </ScrollableTabView>
+        <View style={{ flex: 8 }}>
+          <ScrollableTabView
+            style={{}}
+            locked
+            scrollWithoutAnimation
+            tabBarBackgroundColor={"#ccc"}
+            tabBarTextStyle={styles.tabBarTextStyle}
+            tabBarInactiveTextColor={"#000"}
+            tabBarActiveTextColor={"#E10264"}
+            tabBarUnderlineStyle={styles.underlineStyle}
+          >
+            <Discover tabLabel="DISCOVER" />
+            <Exploer tabLabel="EXPLOER" />
+          </ScrollableTabView>
+        </View>
       </View>
     );
   }

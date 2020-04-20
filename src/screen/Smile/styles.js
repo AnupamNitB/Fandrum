@@ -5,7 +5,7 @@ import { UiColor, TextColor, TextSize } from "../../theme";
 export default StyleSheet.create({
   mainContainer: {
     flex: 1,
-    backgroundColor: UiColor.GRAY,
+    backgroundColor: "#f5f2f2",
   },
   videoTitle: {
     fontSize: TextSize.h2,

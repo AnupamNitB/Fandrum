@@ -64,23 +64,8 @@ class Home extends React.Component {
             />
           </View>
 
-          {/* <ScrollableTabView
-            style={{ marginTop: 20 }}
-            locked
-            scrollWithoutAnimation
-            tabBarTextStyle={styles.tabBarTextStyle}
-            tabBarBackgroundColor={"#ccc"}
-            tabBarInactiveTextColor={"#000"}
-            tabBarActiveTextColor={"#E10264"}
-            tabBarUnderlineStyle={styles.underlineStyle}
-          >
-            <Movies tabLabel="MOVIES" />
-            <Sports tabLabel="SPORTS" />
-            <Shows tabLabel="SHOWS" />
-            <FanVideos tabLabel="FUN VIDEO" />
-          </ScrollableTabView> */}
           <ScrollableTabView
-            style={{ height: 40, marginTop: 25 }}
+            style={{ height: 38, marginTop: 25 }}
             locked
             scrollWithoutAnimation
             tabBarBackgroundColor={"#ccc"}
@@ -94,9 +79,8 @@ class Home extends React.Component {
             <Shows tabLabel="SHOWS" />
             <FanVideos tabLabel="FUN VIDEO" />
           </ScrollableTabView>
-          <View style={{ flex: 1, marginTop: 5 }}>
-            <Movies />
-          </View>
+
+          <Movies />
         </ScrollView>
       </View>
     );

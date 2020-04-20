@@ -58,12 +58,24 @@ class MovieDetails extends React.Component {
     return (
       <View style={styles.mainContainer}>
         {HeaderWithGoBackAndOption("", Strings.APP_NAME)}
-
-        <Image
-          style={styles.bannerImg}
-          source={require("../../assets/img/cut_video_img01.png")}
-        />
         <ScrollView>
+          <Image
+            style={styles.bannerImg}
+            source={require("../../assets/img/cut_fanvideo_img01.png")}
+          />
+          <View
+            style={{
+              position: "absolute",
+              top: 75,
+
+              alignSelf: "center",
+            }}
+          >
+            <Image
+              style={styles.playIcon}
+              source={require("../../assets/icons/ic_play.png")}
+            />
+          </View>
           <View style={styles.box}>
             <Image
               style={styles.imageContent}
@@ -92,7 +104,15 @@ class MovieDetails extends React.Component {
                 />
               </View>
               <Text style={styles.description}>
-                Lorem ipsum dolor sit amet, elit consectetur
+                Lorem ipsum dolor sit amet, elit consectetur Lorem ipsum dolor
+                sit amet, elit consectetur Lorem ipsum dolor sit amet, elit
+                consectetur Lorem ipsum dolor sit amet, elit consectetur Lorem
+                ipsum dolor sit amet, elit consectetur Lorem ipsum dolor sit
+                amet, elit consectetur Lorem ipsum dolor sit amet, elit
+                consectetur Lorem ipsum dolor sit amet, elit consecteturLorem
+                ipsum dolor sit amet, elit consectetur Lorem ipsum dolor sit
+                amet, elit consecteturLorem ipsum dolor sit amet, elit
+                consectetur Lorem ipsum dolor sit amet, elit consectetur
               </Text>
               <View style={{ flexDirection: "row" }}>
                 <Image
@@ -109,18 +129,22 @@ class MovieDetails extends React.Component {
             <Image
               style={styles.netflixImgs}
               source={require("../../assets/img/cut_netflix_logo.png")}
+              resizeMode="contain"
             />
             <Image
               style={styles.netflixImgs}
               source={require("../../assets/img/cut_hulu_logo.png")}
+              resizeMode="contain"
             />
             <Image
               style={styles.netflixImgs}
               source={require("../../assets/img/cut_amazon_prime_logo.png")}
+              resizeMode="contain"
             />
             <Image
-              style={styles.netflixImgs}
+              style={styles.youtubeImgs}
               source={require("../../assets/img/cut_tube_logo.png")}
+              resizeMode="contain"
             />
           </View>
           <View style={styles.buttons}>
@@ -172,27 +196,33 @@ class MovieDetails extends React.Component {
           </View>
           <View style={styles.row}>
             <Image
-              style={styles.emojiIcon}
-              source={require("../../assets/img/cut_smileyface_03.png")}
+              style={styles.statIcon}
+              source={require("../../assets/icons/ic_star.png")}
             />
             <View style={{ marginTop: 20 }}>
               <Text style={styles.nameTxt}>5/10</Text>
-              <Text style={styles.nameTxt}>845</Text>
+              <Text style={styles.nameTxt1}>845</Text>
             </View>
             <View
               style={{
                 flexDirection: "row",
-                justifyContent: "space-between",
+                justifyContent: "space-evenly",
                 width: 200,
               }}
             >
-              <View style={{ borderEndWidth: 1, width: 80 }} />
+              <View
+                style={{
+                  borderEndWidth: 1.2,
+                  width: 20,
+                  marginTop: 5,
+                  height: 50,
+                }}
+              />
               <Text style={styles.mblTxt}>CRITICS</Text>
             </View>
           </View>
-
+          <Text style={styles.title}>CAST</Text>
           <View style={{ minHeight: 150, backgroundColor: "#f0faf9" }}>
-            <Text style={styles.title}>CAST</Text>
             <FlatList
               showsHorizontalScrollIndicator={false}
               data={item}
@@ -228,13 +258,13 @@ class MovieDetails extends React.Component {
                 height: 50,
               }}
             >
-              <Text style={{ fontSize: 12, fontWeight: "700" }}>
+              <Text style={{ fontSize: 15, fontWeight: "700" }}>
                 USERS REVIEW
               </Text>
               <Text
                 style={{
                   fontSize: 12,
-                  fontWeight: "700",
+                  fontWeight: "500",
                   textDecorationLine: "underline",
                 }}
               >
@@ -251,8 +281,8 @@ class MovieDetails extends React.Component {
             }}
           >
             <Image
-              style={styles.socialIcon}
-              source={require("../../assets/img/cut_smileyface_03.png")}
+              style={styles.statIcon1}
+              source={require("../../assets/icons/ic_star.png")}
             />
             <View>
               <Text style={styles.interestingText}>
@@ -285,7 +315,7 @@ class MovieDetails extends React.Component {
               padding: 10,
               marginTop: 30,
               backgroundColor: "#f0faf9",
-              height: 50,
+              height: 80,
               alignItems: "center",
             }}
           >
@@ -307,7 +337,7 @@ class MovieDetails extends React.Component {
               VIEW ALL
             </Text>
           </View>
-          <View style={{ height: 20, height: 80, backgroundColor: "#fff" }}>
+          <View style={{ backgroundColor: "#fff" }}>
             <Text
               style={{
                 fontSize: 14,
@@ -322,15 +352,15 @@ class MovieDetails extends React.Component {
               style={{
                 fontSize: 12,
 
-                marginTop: 10,
+                marginVertical: 20,
                 marginLeft: 10,
               }}
             >
               Age of Greek, ALAMO CITY MOVIE TALK
             </Text>
           </View>
-          <View style={{ height: 60, backgroundColor: "#f0faf9" }}>
-            <Text style={styles.videoTitle}>FAN VIDEO</Text>
+          <View style={{ height: 80, backgroundColor: "#f0faf9" }}>
+            <Text style={styles.videoTitle}>FAN VIDEOS</Text>
           </View>
           <View style={{ minHeight: 150 }}>
             <FlatList
@@ -359,7 +389,7 @@ class MovieDetails extends React.Component {
               keyExtractor={(item, index) => index.toString()}
             />
           </View>
-          <View style={{ height: 60, backgroundColor: "#f0faf9" }}>
+          <View style={{ height: 80, backgroundColor: "#f0faf9" }}>
             <Text style={styles.videoTitle}>MOVIES SIMILAR</Text>
           </View>
 
@@ -373,7 +403,7 @@ class MovieDetails extends React.Component {
                   <TouchableOpacity>
                     <ImageBackground
                       source={{ uri: item.hotSpot }}
-                      style={styles.imageThumbnail}
+                      style={styles.imageThumbnail1}
                     />
                     <Image
                       source={require("../../assets/img/cut_bookmark.png")}
@@ -382,10 +412,10 @@ class MovieDetails extends React.Component {
                     <View
                       style={{
                         height: 30,
-                        width: 125,
+                        width: 137,
                         backgroundColor: "#D3D3D399",
                         position: "absolute",
-                        bottom: 50,
+                        bottom: 70,
                         // paddingHorizontal: 5,
                         flexDirection: "row",
                         justifyContent: "center",

@@ -19,6 +19,6 @@ export default StyleSheet.create({
   },
   underlineStyle: {
     backgroundColor: "#E10264",
-    // marginBottom: 8,
+    // marginBottom: 12,
   },
 });
