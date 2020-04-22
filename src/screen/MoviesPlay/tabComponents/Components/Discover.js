@@ -19,15 +19,16 @@ class Discover extends React.Component {
           <View>
             <Image
               // resizeMode="contain"
-              source={require("../../../../assets/img/cut_main_banner_01.png")}
+              source={require("../../../../assets/img/black.jpg")}
               style={styles.bkImage}
             />
+
             <View
               style={{
                 position: "absolute",
                 top: 0,
-                right: 5,
-                marginTop: 95,
+                right: 15,
+                marginTop: 55,
               }}
             >
               <TouchableOpacity>
@@ -72,40 +73,30 @@ class Discover extends React.Component {
             style={{
               position: "absolute",
               bottom: 0,
-              justifyContent: "center",
-              alignItems: "center",
+              marginLeft: 25,
             }}
           >
-            <Text
-              style={{
-                fontSize: 14,
-                color: "#fff",
-                marginVertical: 10,
-                fontWeight: "600",
-              }}
-            >
-              Action 18+ HD
-            </Text>
-            <Text
-              style={{
-                fontSize: 14,
-                color: "#fff",
-                marginVertical: 10,
-                fontWeight: "600",
-              }}
-            >
+            <Text style={styles.actions}>Action 18+ HD</Text>
+            <Text style={styles.comlpex}>
               Complex wittty funny . friendship .Summary
             </Text>
-            <Text
-              style={{
-                fontSize: 14,
-                color: "#fff",
-                marginVertical: 12,
-                fontWeight: "600",
-              }}
-            >
+            <View style={{ flexDirection: "row" }}>
+              <Image
+                style={styles.statIcon}
+                resizeMode="contain"
+                source={require("../../../../assets/icons/ic_star.png")}
+              />
+              <Text style={styles.ratting}>7/10</Text>
+              <Image
+                style={[styles.statIcon1, { marginLeft: 12 }]}
+                resizeMode="contain"
+                source={require("../../../../assets/img/cut_imdb.png")}
+              />
+            </View>
+            <Text style={styles.des}>
               Lorem ipsum dolor sit amet, elit consectetur Lorem ipsum dolor sit
-              amet, elit consectetur
+              amet, elit consectetur Lorem ipsum dolor sit amet, elit
+              consectetur Lorem ipsum dolor sit amet, elit consectetur
             </Text>
           </View>
         </ScrollView>

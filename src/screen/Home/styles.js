@@ -8,7 +8,7 @@ export default StyleSheet.create({
   },
   bannerImg: {
     width: w(90),
-    height: h(40),
+    height: h(35),
     marginHorizontal: 18,
     borderRadius: 10,
   },

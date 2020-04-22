@@ -32,7 +32,22 @@ const TabIcon = ({ img, focused }) => {
     />
   );
 };
-
+const dollarIcon = ({ img }) => {
+  return (
+    <Image
+      source={img}
+      style={{
+        borderRadius: 50,
+        height: 70,
+        width: 70,
+        borderColor: "#f1f1f1",
+        borderWidth: 6,
+        marginBottom: 45,
+        backgroundColor: "#fd005c",
+      }}
+    />
+  );
+};
 var width = Dimensions.get("window").width;
 const RouterWithRedux = connect()(Router);
 
@@ -106,12 +121,16 @@ const Root = () => {
                 title="Smile"
               />
             </Scene>
-            <Scene icon={this.DollarIcon}>
+            <Scene
+              title="DollarIcon"
+              icon={dollarIcon}
+              img={require("./assets/icons/ic_smile.png")}
+            >
               <Scene
                 component={DollarIcon}
                 hideNavBar={true}
-                // key="DollarIcon"
-                // title="DollarIcon"
+                key="DollarIcon"
+                title="DollarIcon"
               />
             </Scene>
             <Scene

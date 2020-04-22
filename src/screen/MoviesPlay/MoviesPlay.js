@@ -78,7 +78,7 @@ class MoviesPlay extends React.Component {
           <Shows tabLabel="SHOWS" />
           <FanVideos tabLabel="FUN VIDEO" />
         </ScrollableTabView>
-        <View style={{ flex: 8 }}>
+        <View style={{ flex: 8.2 }}>
           <ScrollableTabView
             style={{}}
             locked

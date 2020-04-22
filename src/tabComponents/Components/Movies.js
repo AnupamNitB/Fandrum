@@ -11,8 +11,9 @@ import { Actions } from "react-native-router-flux";
 // import { IconAsset, Strings, UiColor } from "../../theme";
 // import { HeaderWithGoBackAndOption } from "../../components/AppHeader";
 import styles from "../ComponentStyles/movieStyles";
+import MovieCall from "../../reduxprovider/actions/ActionHomeScreen";
 
-// import { connect } from 'react-redux';
+import { connect } from "react-redux";
 import { w, h, totalSize } from "../../utils/Dimensions";
 
 class Movies extends React.Component {
@@ -20,6 +21,10 @@ class Movies extends React.Component {
     super(props);
     this.state = {};
   }
+  // componentDidMount() {
+  //   // const data = {};
+  //   this.props.MovieAPI();
+  // }
   render() {
     return (
       <View style={styles.mainContainer}>
@@ -258,11 +263,18 @@ class Movies extends React.Component {
     );
   }
 }
-// const mapStateToProps = state => {
-//   console.log(state);
-//   return {};
-// };
-// const mapStateToDispatch = dispatch => {
-//   return {};
-// };
-export default Movies;
+const mapStateToProps = (state) => {
+  console.log(state);
+  return {
+    MovieData: state.homeScreen.MovieData,
+  };
+};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    MovieAPI: () => dispatch(MovieCall.MovieAPI()),
+  };
+};
+export default connect(
+  null,
+  mapDispatchToProps
+)(Movies);
