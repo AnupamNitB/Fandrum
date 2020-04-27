@@ -15,7 +15,7 @@ export default StyleSheet.create({
     margin: 8,
   },
   halfImgFirst: {
-    width: w(20),
+    width: w(18.5),
     height: h(18.5),
     margin: 8,
   },
@@ -33,5 +33,15 @@ export default StyleSheet.create({
 
     width: w(6),
     height: h(6),
+  },
+  smallImg: {
+    height: 25,
+    width: w(20),
+    backgroundColor: "#D3D3D399",
+    position: "absolute",
+    bottom: 0,
+    padding: 5,
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
 });

@@ -38,8 +38,8 @@ const dollarIcon = ({ img }) => {
       source={img}
       style={{
         borderRadius: 50,
-        height: 70,
-        width: 70,
+        height: 60,
+        width: 60,
         borderColor: "#f1f1f1",
         borderWidth: 6,
         marginBottom: 45,
@@ -124,7 +124,7 @@ const Root = () => {
             <Scene
               title="DollarIcon"
               icon={dollarIcon}
-              img={require("./assets/icons/ic_smile.png")}
+              img={require("./assets/icons/ic_dollar1.png")}
             >
               <Scene
                 component={DollarIcon}

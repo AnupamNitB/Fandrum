@@ -1,25 +1,32 @@
 import React, { useState } from "react";
 import { View, Image, ScrollView, Text, TouchableOpacity } from "react-native";
 import { Actions } from "react-native-router-flux";
-// import { IconAsset, Strings, UiColor } from "../../theme";
-// import { HeaderWithGoBackAndOption } from "../../components/AppHeader";
-import styles from "../ComponentStyles/discoverStyle";
 
-// import { connect } from 'react-redux';
+import styles from "../ComponentStyles/discoverStyle";
+import DiscoverCallAPI from "../../../../reduxprovider/actions/ActionDiscoverScreen";
+
+import { connect } from "react-redux";
 
 class Discover extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
+  componentDidMount() {
+    this.props.DiscoverAPI();
+  }
   render() {
+    console.log(this.props, "hello iam deiscove page");
     return (
       <View style={styles.mainContainer}>
         <ScrollView>
           <View>
             <Image
               // resizeMode="contain"
-              source={require("../../../../assets/img/black.jpg")}
+              // source={require("../../../../assets/img/black.jpg")}
+              source={{
+                uri: `https://image.tmdb.org/t/p/w500${this.props.poster_path}`,
+              }}
               style={styles.bkImage}
             />
 
@@ -33,24 +40,28 @@ class Discover extends React.Component {
             >
               <TouchableOpacity>
                 <Image
+                  resizeMode="contain"
                   style={styles.socialIcon}
                   source={require("../../../../assets/img/cut_sideicon_01.png")}
                 />
               </TouchableOpacity>
               <TouchableOpacity>
                 <Image
+                  resizeMode="contain"
                   style={styles.socialIcon}
                   source={require("../../../../assets/img/cut_sideicon_02.png")}
                 />
               </TouchableOpacity>
               <TouchableOpacity>
                 <Image
+                  resizeMode="contain"
                   style={styles.socialIcon}
                   source={require("../../../../assets/img/cut_sideicon_03.png")}
                 />
               </TouchableOpacity>
               <TouchableOpacity>
                 <Image
+                  resizeMode="contain"
                   style={styles.socialIcon}
                   source={require("../../../../assets/img/cut_sideicon_04.png")}
                 />
@@ -63,6 +74,7 @@ class Discover extends React.Component {
               </TouchableOpacity>
               <TouchableOpacity>
                 <Image
+                  resizeMode="contain"
                   style={styles.socialIcon}
                   source={require("../../../../assets/img/cut_sideicon_06.png")}
                 />
@@ -104,11 +116,18 @@ class Discover extends React.Component {
     );
   }
 }
-// const mapStateToProps = state => {
-//   console.log(state);
-//   return {};
-// };
-// const mapStateToDispatch = dispatch => {
-//   return {};
-// };
-export default Discover;
+const mapStateToProps = (state) => {
+  console.log("Discover State", state);
+  return {
+    Discover: state.discoverScreen.Discover,
+  };
+};
+const mapStateToDispatch = (dispatch) => {
+  return {
+    DiscoverAPI: () => dispatch(DiscoverCallAPI.DiscoverAPI()),
+  };
+};
+export default connect(
+  mapStateToProps,
+  mapStateToDispatch
+)(Discover);

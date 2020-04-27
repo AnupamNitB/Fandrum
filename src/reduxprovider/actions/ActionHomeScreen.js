@@ -4,13 +4,13 @@ import { API_BASE_URL, THIRD_PARTY } from "../../constant/constant";
 const MovieData = (data) => {
   return {
     type: ActionTypes.MOVIE_HOME_DATA,
-    MovieData: data,
+    data,
   };
 };
 
 const IsLoading = (bool) => {
   return {
-    type: ActionTypes.HOME_IS_LOADING,
+    type: ActionTypes.IS_LOADING,
     isLoading: bool,
   };
 };
@@ -18,8 +18,9 @@ const IsLoading = (bool) => {
 const MovieAPI = () => {
   return (dispatch) => {
     dispatch(IsLoading(true));
+
     fetch(
-      `${THIRD_PARTY}/&language=en-US&sort_by=popularity.desc&include_adult=true&include_video=true&page=1`,
+      `${THIRD_PARTY}&language=en-US&sort_by=popularity.desc&include_adult=true&include_video=true&page=1`,
       {
         method: "GET",
         headers: {
@@ -30,18 +31,22 @@ const MovieAPI = () => {
     )
       .then((res) => res.json())
       .then((res) => {
-        console.log("Register Res", res);
-        if (res.status === "ok") {
-          dispatch(MovieData(res.articles));
-          dispatch(IsLoading(false));
-        } else {
-          dispatch(MovieData([]));
-          dispatch(IsLoading(false));
-          alert(res.message);
-        }
+        // console.log("Home Screen", res);
+        dispatch(MovieData(res.results));
+        dispatch(IsLoading(false));
+        // if (res.status === "ok") {
+        //   // console.log("resdataa", res);
+        //   dispatch(MovieData(res.results));
+        //   // dispatch(IsLoading(false));
+        // } else {
+        //   dispatch(MovieData([]));
+        //   // dispatch(MovieData([]));
+        //   // dispatch(IsLoading(false));
+        //   // alert(res.message);
+        // }
       })
       .catch((e) => {
-        dispatch(IsLoading(false));
+        // dispatch(IsLoading(false));
       });
   };
 };
