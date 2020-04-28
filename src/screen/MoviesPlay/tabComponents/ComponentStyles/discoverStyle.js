@@ -12,8 +12,8 @@ export default StyleSheet.create({
     height: h(85),
   },
   socialIcon: {
-    width: w(7),
-    height: h(7),
+    width: w(9),
+    height: h(9),
   },
   statIcon1: {
     marginBottom: 15,

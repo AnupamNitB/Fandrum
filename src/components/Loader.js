@@ -4,7 +4,7 @@ import { Modal, View, Text, StyleSheet, ActivityIndicator } from "react-native";
 export default class Loader extends Component {
   render() {
     const { loading, ...attributes } = this.props;
-    console.log(loading,"loading")
+    console.log(loading, "loading dadtatta");
     return (
       <Modal transparent={true} animationType={"none"} visible={loading}>
         <View style={styles.modalBackground}>
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "column",
     justifyContent: "space-around",
-    backgroundColor: "#00000040"
+    backgroundColor: "#00000040",
   },
   activityIndicatorWrapper: {
     backgroundColor: "#FFFFFF",
@@ -32,6 +32,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     display: "flex",
     alignItems: "center",
-    justifyContent: "space-around"
-  }
+    justifyContent: "space-around",
+  },
 });

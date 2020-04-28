@@ -55,13 +55,18 @@ class MovieDetails extends React.Component {
     // const validation = () => {
     //   withError.handleSignup(userName, mobile);
     // };
+    console.log("porpssss", this.props);
+    const movieData = this.props;
     return (
       <View style={styles.mainContainer}>
         {HeaderWithGoBackAndOption("", Strings.APP_NAME)}
         <ScrollView>
           <Image
             style={styles.bannerImg}
-            source={require("../../assets/img/cut_fanvideo_img01.png")}
+            // source={require("../../assets/img/cut_fanvideo_img01.png")}
+            source={{
+              uri: `https://image.tmdb.org/t/p/w500${movieData.poster_Img}`,
+            }}
           />
           <View
             style={{
@@ -79,7 +84,9 @@ class MovieDetails extends React.Component {
           <View style={styles.box}>
             <Image
               style={styles.imageContent}
-              source={require("../../assets/img/cut_thumb_03.png")}
+              source={{
+                uri: `https://image.tmdb.org/t/p/w500${movieData.poster_Img}`,
+              }}
             />
 
             <View style={styles.boxContent}>
@@ -97,23 +104,13 @@ class MovieDetails extends React.Component {
                 </TouchableOpacity>
               </View>
               <View style={{ flexDirection: "row" }}>
-                <Text style={styles.title}>Dr Dolitlte 2020</Text>
+                <Text style={styles.title}>{movieData.title}</Text>
                 <Image
                   style={styles.socialIcon}
                   source={require("../../assets/icons/ic_yoyo.png")}
                 />
               </View>
-              <Text style={styles.description}>
-                Lorem ipsum dolor sit amet, elit consectetur Lorem ipsum dolor
-                sit amet, elit consectetur Lorem ipsum dolor sit amet, elit
-                consectetur Lorem ipsum dolor sit amet, elit consectetur Lorem
-                ipsum dolor sit amet, elit consectetur Lorem ipsum dolor sit
-                amet, elit consectetur Lorem ipsum dolor sit amet, elit
-                consectetur Lorem ipsum dolor sit amet, elit consecteturLorem
-                ipsum dolor sit amet, elit consectetur Lorem ipsum dolor sit
-                amet, elit consecteturLorem ipsum dolor sit amet, elit
-                consectetur Lorem ipsum dolor sit amet, elit consectetur
-              </Text>
+              <Text style={styles.description}>{movieData.overview}</Text>
               <View style={{ flexDirection: "row" }}>
                 <Image
                   style={styles.commentIcon}
@@ -200,7 +197,7 @@ class MovieDetails extends React.Component {
               source={require("../../assets/icons/ic_star.png")}
             />
             <View style={{ marginTop: 20 }}>
-              <Text style={styles.nameTxt}>5/10</Text>
+              <Text style={styles.nameTxt}>{movieData.vote_average}/10</Text>
               <Text style={styles.nameTxt1}>845</Text>
             </View>
             <View

@@ -23,7 +23,7 @@ const DiscoverAPI = () => {
         }
       );
       let responseJSON = await response.json();
-      console.log("response data", responseJSON);
+      // console.log("response data", responseJSON);
       dispatch(discoverData(responseJSON.results));
     } catch (error) {
       console.error(error);
